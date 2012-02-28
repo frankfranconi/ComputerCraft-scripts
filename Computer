@@ -1,0 +1,15 @@
+rednet.open("right");
+
+function main()
+print("Please select the application to run:");
+app = read();
+runapp(app);
+end
+
+function runapp(app)
+rednet.broadcast(app);
+print("Order sent.\n");
+main();
+end
+
+main();
